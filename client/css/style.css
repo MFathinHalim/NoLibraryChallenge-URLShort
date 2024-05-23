@@ -1,0 +1,104 @@
+html {
+  font-size: 16px; /* Base font size */
+  font-family: sans-serif;
+}
+
+:root {
+  --primary: #211951; /* Dark blue */
+  --secondary: #15f5ba; /* Light turquoise */
+  --accent: #836fff; /* Light purple */
+  --text: #f0f3ff; /* White */
+  --background: #030303; /* Dark background */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure content fills viewport */
+  margin: 0; /* Remove default body margin */
+  padding: 20px; /* Add some breathing room */
+}
+
+#add {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Vertically space elements evenly */
+  align-items: center;
+  gap: 15px;
+  width: 600px;
+  max-width: 100%;
+  background-color: rgba(
+    var(--background),
+    0.8
+  ); /* Semi-transparent background */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+input {
+  padding: 15px;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  background-color: var(--background);
+  color: var(--text);
+  transition: all 0.2s ease-in-out; /* Smooth transitions */
+}
+
+input:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: var(--accent); /* Highlight on focus */
+  background-color: #f7f7f7;
+  color: black;
+}
+
+button {
+  border-radius: 8px;
+  padding: 15px 30px;
+  border: none;
+  border: 2px dashed var(--secondary);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer; /* Indicate clickable element */
+  background-color: var(--primary);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--accent); /* Hover effect */
+}
+
+#response {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards horizontally */
+  gap: 15px;
+  margin-top: 20px; /* Add spacing above cards */
+}
+
+#card {
+  flex: 1 0 30%; /* Ensure cards take up available space but don't shrink below 30% */
+  background-color: var(--primary);
+  border: 1px solid var(--secondary);
+  padding: 0px 10px 10px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.2s ease-in-out;
+}
+
+#card:hover {
+  transform: translateY(-5px);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold; /* Emphasize text for links */
+}
